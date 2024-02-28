@@ -1,13 +1,20 @@
+
 const button = document.getElementById("calcular");
 const input = document.getElementById("peso");
 const RES = document.getElementById("resultado");
-button.addEventListener("click", calcularDosisDeHidratacion);
+
+button.addEventListener("click", calculadoraEntraEnAccion);
 input.addEventListener("click", () => {
   RES.style.display = "none";
 });
-function calcularDosisDeHidratacion() {
+function calculadoraEntraEnAccion() {
   const PESO = Number(input.value);
+  if (PESO <1) {
+    RES.innerHTML = `<h2 id="error"> ingresa un numero valido</h2>`;
+    RES.style.display = "block";
+    return;
 
+  }
   if (PESO <= 30) {
     console.log(hollidaySegar(PESO));
     let resultado = hollidaySegar(PESO);

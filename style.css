@@ -78,6 +78,7 @@ button {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	transition: transform 20ms ease-in;
+    margin-top: 10px;
 }
 
 button:active {
@@ -87,7 +88,7 @@ button:active {
 #error{
     color: red;
     font-weight: bold;
-    display: none;
+    
 }
 
 .resultado{
